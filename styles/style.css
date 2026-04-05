@@ -1,264 +1,218 @@
-/* style.css - LULU豬網頁專屬樣式表 */
 
-/* 1. 基本網頁底色 */
+/* --- 設定 --- */
 body {
-    background-color: #fff0f0; 
-    font-family: sans-serif; 
-    margin: 0;
-    padding: 0;
+    background-color: #fff0f0; /* 淡粉紅背景 */
+    margin: 0;                 /* 清除預設的外部空間 */
+    padding: 0;                /* 清除預設的內部空間 */
 }
 
-/* 2. 主容器：粉色大邊框 */
+/* --- 主容器  --- */
 .lulu-box {
-    border: 8px solid #ffb6c1; 
-    border-radius: 20px; 
-    max-width: 600px;
-    margin: 40px auto; 
-    padding: 30px; 
-    background-color: #ffffff; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    border: 8px solid #ffb6c1; /* 設定 8px 的粉紅色實線邊框 */
+    border-radius: 20px;       /* 把邊框的四個角變圓潤 */
+    max-width: 600px;          /* 限制最大寬度 */
+    margin: 40px auto;         /* 區塊置中 */
+    padding: 30px;             /* 文字跟邊框保持 30px 的距離 */
+    background-color: #ffffff; /* 裡面的背景色設定為白色 */
 }
 
-/* 3. 標題設計 */
+/* --- 文字設計 --- */
 h1 {
-    text-align: center; 
-    color: #ff6680;     
+    text-align: center; /* 文字置中對齊 */
+    color: #ff6680;     /* 深粉紅色 */
     margin-top: 0;
     margin-bottom: 5px;          
 }
 
-/* 4. 標語設計 */
 .slogan {
     text-align: center;      
     color: #ff99aa;          
-    font-size: 1.1em;        
-    font-weight: bold;       
+    font-size: 1.1em;        /* 放大字體  */
+    font-weight: bold;       /* 字體加粗 */
     margin-top: 0;           
     margin-bottom: 20px;     
-    letter-spacing: 1px;     
 }
 
-/* 5. 圖片區域：只保留上方的一條虛線分隔線 */
-.image-area {
+/* --- 導覽列設計 --- */
+.nav-bar {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+
+.nav-bar a {
+    text-decoration: none;  /* 去掉超連結醜醜的預設底線 */
+    color: #ff88a0;         
+    font-weight: bold;
+    margin: 0 15px;         /* 讓每個選項左右隔開 15px */
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.nav-bar a:hover {         
+    background-color: #ffebf0; 
+    color: #ff6680;            
+}
+
+/* --- 圖片與影片 --- */
+.image-area, .video-area {
     margin-top: 30px;
-    border-top: 3px dashed #ffcccc; 
+    border-top: 3px dashed #ffcccc; /* 上方畫一條 3px 的粉紅虛線 */
     padding-top: 20px;
 }
 
-/* 6. 圖片內框：絕對乾淨，無任何邊框底色 */
-.main-image-frame {
-    max-width: 90%; 
-    margin: 0 auto; 
-}
-
-/* 7. 圖片本體圓角 */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px; 
-}
-
-/* 8. 影片區域：保留上方的一條虛線分隔線 */
 .video-area {
-    margin-top: 30px;
-    border-top: 3px dashed #ffcccc; 
-    padding-top: 20px;
     text-align: center;
 }
 
-/* 影片標題 */
 .video-area h2 {
     color: #ff88a0;
     font-size: 1.3em;
     margin-bottom: 15px;
 }
 
-/* 9. 影片內框：絕對乾淨，無任何邊框底色 */
-.video-frame {
+.main-image-frame, .video-frame {
     max-width: 90%; 
-    margin: 0 auto; 
+    margin: 0 auto; /* 讓圖片/影片在容器內置中 */
 }
 
-/* 10. YouTube 播放器設定 */
+img {
+    display: block;
+    max-width: 100%;    /* 讓圖片跟著外框自動縮放，不會破版 */
+    height: auto;       /* 高度依照比例自動調整 */
+    border-radius: 5px; 
+}
+
 .video-frame iframe {
     width: 100%;
-    aspect-ratio: 16 / 9; 
+    aspect-ratio: 16 / 9; /* 強制影片維持 16:9 的長寬比例 */
     border-radius: 5px;   
 }
 
-/* 11. 連結按鈕區域排版 */
+/* --- 連結按鈕設計 --- */
 .link-area {
     text-align: center; 
     margin-top: 40px;   
 }
 
-/* 12. 按鈕樣式 */
 .lulu-btn {
     display: inline-block;
     background-color: #ff88a0; 
     color: white;              
-    padding: 12px 30px;        
+    padding: 12px 30px;        /* 上下空間 12px，左右空間 30px */
     text-decoration: none;     
-    border-radius: 30px;       
+    border-radius: 30px;       /* 按鈕變橢圓形 */
     font-weight: bold;         
     font-size: 1.1em;          
-    box-shadow: 0 4px 10px rgba(255, 136, 160, 0.4); 
-    transition: 0.2s;          
+    margin: 10px;              
 }
 
 .lulu-btn:hover {
-    background-color: #ff6680;   
+    background-color: #ff6680; 
 }
-/* 12. 按鈕樣式 */
-.lulu-btn {
-    display: inline-block;
-    background-color: #ff88a0; 
-    color: white;              
-    padding: 12px 30px;        
-    text-decoration: none;     
-    border-radius: 30px;       
-    font-weight: bold;         
-    font-size: 1.1em;          
-    box-shadow: 0 4px 10px rgba(255, 136, 160, 0.4); 
-    transition: 0.2s;          
-    margin: 10px; /* 🌟 新增這行：讓按鈕上下左右都保持 10px 的安全距離 🌟 */
-}
-/* 13. 圖示區域排版 (加上您要的虛線分隔線) */
+
+/* --- icon --- */
 .icon-area {
     margin-top: 40px;
-    border-top: 3px dashed #ffcccc; /* 加上粉紅虛線分隔線 */
+    border-top: 3px dashed #ffcccc; /* 上方畫一條 3px 的粉紅虛線 */
     padding-top: 20px;
-    text-align: center;             /* 讓圖示置中 */
-    font-size: 24px;                /* 稍微放大一點點才看得清楚 */
-    color: #ff88a0;                 /* 統一用溫柔的粉紅色 */
-    display: flex;
-    justify-content: center;
-    gap: 15px;                      /* 讓圖示之間有一點點距離，不會全部黏在一起 */
-    align-items: center;            /* 讓不同種類的圖示垂直對齊 */
+    text-align: center;             
+    font-size: 24px;                /* 把 icon 放大 */
+    color: #ff88a0;                 
+    justify-content: center;        /* 置中對齊 */
+    gap: 15px;                      /* 間距為 15px */
+    align-items: center;            /* 垂直對齊中心點 */
 }
-/* 15. 超可愛 LULU 豬表格本體 */
+
+/* --- 表格設計 --- */
 .lulu-table {
-    width: 100%;               /* 讓表格寬度填滿整個容器 */
-    border-collapse: collapse; /* 讓邊框合併，看起來更乾淨 */
-    background-color: #fff9fa; /* 非常淡的粉底色 */
-    border-radius: 10px;       /* 加上圓角 */
-    overflow: hidden;          /* 確保表格內容不會超出圓角邊框 */
+    width: 100%;               
+    border-collapse: collapse; /* 把表格的雙線邊框合併成單線 */
+    background-color: #fff9fa; 
+    border-radius: 10px;       
 }
 
-/* 表格的格子與線條設定 */
 .lulu-table th, .lulu-table td {
-    border: 2px dashed #ffcccc; /* 可愛粉紅虛線邊框 */
-    padding: 12px;              /* 讓格子裡有呼吸空間 */
-    text-align: center;         /* 文字置中 */
+    border: 2px dashed #ffcccc; 
+    padding: 12px;              
+    text-align: center;         
 }
 
-/* 標題列專屬設定 */
 .lulu-table th {
-    background-color: #ffeebb;  /* 標題列使用向日葵奶油黃 */
-    color: #ff6680;             /* 深粉紅字體 */
-    font-size: 1.1em;           /* 字體稍微放大 */
+    background-color: #ffeebb;  
+    color: #ff6680;             
+    font-size: 1.1em;           
 }
 
-/* 一般資料格設定 */
 .lulu-table td {
-    color: #666;                /* 柔和的深灰色文字 */
-}
-/* 16. 頁腳區域排版 (加上分隔虛線) */
-.footer-area {
-    margin-top: 50px;           /* 與上方表格拉開距離 */
-    border-top: 3px dashed #ffcccc; /* 加上您要求的粉紅分隔虛線 */
-    padding-top: 30px;          /* 虛線與文字間的距離 */
-    text-align: center;         /* 文字置中 */
-    color: #777;                /* 使用較柔和的深灰色 */
-    font-size: 0.95em;          /* 字體稍微縮小一點點 */
-    line-height: 2;             /* 增加行高，讓文字不擁擠 */
+    color: #666;                
 }
 
-/* 強調標籤顏色 */
-.footer-area strong {
-    color: #ff88a0;             /* 標籤使用 LULU 粉色 */
-}
-
-/* 17. 版權文字樣式 */
-.copyright {
-    margin-top: 15px;
-    font-size: 0.85em;          /* 版權字體再小一點 */
-    color: #bbb;                /* 使用較淡的灰色 */
-    letter-spacing: 0.5px;
-}
-/* --- 👇 導覽列專屬設計 👇 --- */
-
-.nav-bar {
-    text-align: center;
-    margin: 20px 0;
-    padding: 10px 0;
-    
-}
-
-.nav-bar a {
-    text-decoration: none;  /* 去掉底線 */
-    color: #ff88a0;         /* LULU粉 */
+.lulu-table td a {
+    color: #ff6680;
+    text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;         /* 讓選項之間有空隙 */
-    padding: 5px 12px;
-    border-radius: 20px;
-    transition: 0.3s;       /* 變色動畫效果 */
 }
 
-/* 滑鼠移上去的效果 */
-.nav-bar a:hover {
-    background-color: #ffebf0; /* 背景變淺粉色 */
-    color: #ff6680;            /* 字體變深粉色 */
+.lulu-table td a:hover {
+    color: #ffb6c1;
+    text-decoration: none;
 }
-/* --- 👇 新增的介紹區塊 (卡片設計) 👇 --- */
 
-/* 19. 介紹區塊外圍排版 */
+/* --- 介紹區塊 (卡片設計) --- */
 .info-area {
     margin-top: 40px;
-    border-top: 3px dashed #ffcccc; /* 上方加一條粉紅虛線分隔 */
+    border-top: 3px dashed #ffcccc; /* 上方畫一條 3px 的粉紅虛線 */
     padding-top: 30px;
 }
 
-/* 20. 每一張資訊卡片的設計 */
 .info-card {
-    background-color: #fff9fa;       /* 超淡的櫻花粉背景 */
-    border: 2px dashed #ffeebb;      /* 奶油黃虛線邊框 */
-    border-radius: 15px;             /* 圓角設計 */
+    background-color: #fff9fa;       
+    border: 2px dashed #ffeebb;      
+    border-radius: 15px;             
     padding: 20px 25px;
-    margin-bottom: 20px;             /* 卡片之間的距離 */
-    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.15); /* 淡淡的粉色陰影 */
-    transition: 0.3s;
+    margin-bottom: 20px;             
 }
 
 
 
-/* 卡片裡的標題 */
 .info-card h3 {
     color: #ff88a0;
     margin-top: 0;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    display: inline-block;
+    display: inline-block;            
 }
 
-/* 卡片裡的文字與列表 */
 .info-card p, .info-card ul {
-    color: #666;                     /* 深灰色文字，閱讀起來不刺眼 */
-    line-height: 1.8;                /* 行距拉大，看起來比較舒服 */
+    color: #666;                     
+    line-height: 1.8;                /* 調整行高 */
     margin-bottom: 0;
 }
 
-/* 列表符號設計 */
 .info-card ul {
-    padding-left: 20px;
+    padding-left: 20px;              /* 縮排 */
 }
 
 .info-card li {
-    margin-bottom: 8px;
+    margin-bottom: 8px;              /* 上下間距 */
 }
 
-/* 強調文字顏色 */
 .info-card li strong, .info-card p strong {
-    color: #ff6680;                  /* 粗體字用深粉紅強調 */
+    color: #ff6680;                  /* 統一設定加粗文字的顏色 */
+}
+
+/* --- 作者區域 --- */
+.footer-area {
+    margin-top: 50px;           
+    border-top: 3px dashed #ffcccc; /* 上方畫一條 3px 的粉紅虛線 */
+    padding-top: 30px;          
+    text-align: center;         
+    color: #777;                
+    font-size: 0.95em;          
+    line-height: 2;             
+}
+
+.footer-area strong {
+    color: #ff88a0;             
 }
